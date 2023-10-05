@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+:root{
+  --primary-color: black;
+  --secondery-color: white;
+  --third-color:gray;
+  --bg-blue:rgb(23, 165, 209);
+}
+
+/*================= common style ==============*/
+
+.d-flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-right{
+    justify-content: right;
+}
+.h600{
+    height:600px;
+    background: url("../images/cover_img.jpg") no-repeat center/cover ;
+}
+.align-center{
+    text-align: center;
+}
+.text-white{
+    color: white;
+}
+.caps{
+    text-transform: capitalize;
+}
+.upper{
+    text-transform:uppercase;
+}
+.gap1{
+    gap: 1px;
+}
+.gap2{
+    gap: 2px;
+}
+.gap3{
+    gap: 3px;
+}
+.mx-auto{
+    margin:auto 0;
+}
+.my1{
+    margin:0 1rem;
+}
+.my2{
+    margin:0 2rem;
+}
+.my3{
+    margin:0 3rem;
+}
+.py1{
+    padding:0 1rem;
+}
+.py2{
+    padding:0 2rem;
+}
+.py3{
+    padding:0 3rem;
+}
+/*=================header==============*/
+.container{
+    max-width:1920px;
+}
+
+.slogan_title{
+    font-size: 6rem;
+    margin: 5rem 0 0 0;
+}
+
+.slogan_text{
+    width: 1000px;
+    border-top:1px solid white;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 3px var(--primary-color);
+}
+
+.btn_request{
+    width:10rem;
+    height:2rem;
+    border-radius: 2rem;
+    margin: auto 7rem;
+}
