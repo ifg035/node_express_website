@@ -66,6 +66,15 @@
 .my3{
     margin:0 3rem;
 }
+.mx1{
+    margin:1rem 0;
+}
+.mx2{
+    margin:2rem 0;
+}
+.mx3{
+    margin:3rem 0;
+}
 .py1{
     padding:0 1rem;
 }
@@ -78,6 +87,7 @@
 /*=================header==============*/
 .container{
     max-width:1440px;
+    justify-content: space-between;
 }
 
 .slogan_title{
@@ -96,6 +106,7 @@
 .btn_request{
     width:9rem;
     height:2rem;
+    margin: 2rem 0 0 51.3rem;
     border-radius: 2rem;
     border:0;
     background: var(--primary-color);
@@ -112,4 +123,33 @@
     background: var(--third-color);
     border-radius:50%;
 
+}
+
+/*------------------  portfolio  -----------------------*/
+/*------------------  conatct -----------------------*/
+.contact-list{
+    display:block;
+    max-width:1440px;
+    text-align: center;
+    margin: 0 0 0 12rem;
+}
+
+
+
+.contact-list li{
+    border-top: 1px dotted var(--primary-color);
+    padding: 1rem 0;
+}
+
+.d-flex span{
+    display:block;
+    width:160px;
+}
+
+.d-flex textarea{
+    flex: 0 0 50%;
+}
+
+.tip{
+    color:var(--third-color);
 }
