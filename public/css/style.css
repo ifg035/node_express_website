@@ -8,9 +8,14 @@
 }
 
 /*================= common style ==============*/
-
+.d-none{
+    display:none;
+}
 .d-flex{
     display: flex;
+}
+.d-grid{
+    display:grid;
 }
 .flex-column{
     flex-direction: column;
@@ -28,7 +33,7 @@
     height:600px;
     background: url("../images/cover_img.jpg") no-repeat center/cover ;
 }
-.align-center{
+.text-center{
     text-align: center;
 }
 .text-white{
@@ -70,6 +75,7 @@
 .py3{
     padding:0 3rem;
 }
+
 /*=================header==============*/
 .container{
     max-width:1440px;
@@ -92,5 +98,15 @@
     width:9rem;
     height:2rem;
     border-radius: 2rem;
-    margin: 2rem  20rem;
+    margin: 2rem  53rem;
 }
+
+
+/*==========================portfolio==================*/
+
+.web-grid{
+    grid-template-columns: 1fr 1fr;
+    grid
+}
+
+/*==========================footer==================*/

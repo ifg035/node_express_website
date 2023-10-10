@@ -7,7 +7,19 @@ html(lang="ko")
         include includes/comm_style.pug
     body 
         include includes/comm_header.pug
+        h1(class="d-none") portfolio
         main 
-           article 
-               p 포트폴리오 페이지
+          hgroup(class="text-center py-2")
+                h2(class="caps") PORTFOLIO:웹,그래픽
+                article 
+                  h2(class="container mx-suto d-flex flex-column text-center")  
+                        ul(class="web-grid") 
+                            li 
+                            img(src="images/cover1.png" alt="")
+                            li 
+                            img(src="images/cover1.png" alt="")
+                            li 
+                            img(src="images/cover1.png" alt="")
+                            li 
+                            img(src="images/cover1.png" alt="")
         include includes/comm_footer.pug
