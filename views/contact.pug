@@ -11,42 +11,42 @@ html(lang="ko")
                 h2(class="caps mx2") CONTACT,REQUEST:작업요청 및 문의
                 article 
                     h2(class="d-none") main - contact
-                    form(id="reqest_form")
+                    form(id="reqest_form" action="/contactAdd", method="post")
                         legend(class="d-none") 폼
                         fieldset
                             ul(class="contact-list")  
                                 li(class="d-flex gap2")
                                     span 구분 
                                     div
-                                        input(type="radio" , name="type",checked)/ 작업요청
+                                        input(type="radio" , name="type",checked)/ 요청
                                         input(type="radio" , name="type")/ 문의
                                 li(class="d-flex gap2")
                                     span 이름
                                     div    
-                                        input(type="text",required)/ (예)홍길동
+                                        input(type="text",name="name",required)/ (예)홍길동
                                         span(class="tip")     
                                 li(class="d-flex gap2")
                                     span 이메일
                                     div    
-                                        input(type="text",required)/ @
+                                        input(type="text",name="email",required)/ @
                                         input(type="text",required)
                                         span(class="tip")     
                                 li(class="d-flex gap2")
                                     span 제목
                                     div    
-                                        input(type="text",required)
+                                        input(type="text",name="title",required)
                                         span(class="tip")     
                                 li(class="d-flex gap2")
                                     span 파일첨부
                                     div    
                                         input(type="text",required)
-                                        input(class="my1" ,type="submit", value="찾아보기")
+                                        input(class="my1",name="file" ,type="submit", value="찾아보기")
                                         span(class="tip")     
                                 li(class="d-flex gap2")
                                     span 내용
                                     div    
-                                        textarea( cols="60", rows="20") 
+                                        textarea( cols="60",name="memo", rows="20") 
                                         span(class="tip") 
                                 li(class="d-flex gap2 justify-center")
                                         input(type="submit" , value="등록")/ 
-                                        input(type="submit" , value="취소")/ 
+                                        input(type="reset" , value="취소")/ 
