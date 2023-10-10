@@ -8,6 +8,26 @@ html(lang="ko")
     body 
         include includes/comm_header.pug
         main 
+           h3(class="d-none") home - main
            article 
-               p 메인 페이지
+               h3(class="text-center py-2 upper") about 
+               div(class=" container mx-auto d-flex justify-between")
+                    div(class="avatar")
+                        img(src="imagse/my_avatar.png", alt="아바타")
+                    div(class="details")
+                        ul
+                            li 이름 : 임예은  
+                            li 사는곳 : 광주광역시 남구
+                            li 혈액형 : AB
+                            li MBTI : INFJ
+           article 
+                h3(class="text-center py-2 upper") portfolio
+                ul 
+                    li 
+                        img(src="images/pf_img1", alt="web")
+                    li 
+                        img(src="images/pf_img2", alt="graphic")
+                    li 
+                        img(src="images/pf_img3", alt="web")
+                button 더보기&plus;
         include includes/comm_footer.pug

@@ -75,7 +75,6 @@
 .py3{
     padding:0 3rem;
 }
-
 /*=================header==============*/
 .container{
     max-width:1440px;
@@ -98,15 +97,19 @@
     width:9rem;
     height:2rem;
     border-radius: 2rem;
-    margin: 2rem  53rem;
+    border:0;
+    background: var(--primary-color);
+    color:var(--secondery-color);
 }
 
 
-/*==========================portfolio==================*/
+/*------------------main>about-----------------------*/
 
-.web-grid{
-    grid-template-columns: 1fr 1fr;
-    grid
+
+.avatar{
+    width:300px;
+    height: 300px;
+    background: var(--third-color);
+    border-radius:50%;
+
 }
-
-/*==========================footer==================*/
