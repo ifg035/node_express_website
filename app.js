@@ -11,17 +11,18 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended:'flase' }));
 
 const conn = mysql.createConnection({
-  host: "http://icetea1.dothome.co.kr",
-  user: "icetea1",
-  database: "dpdms74101!"
+  host: "localhost",
+  user: "ifg.035",
+  password:"dpdms74101!",
+  database: "contact",
+  dateString:"date"
 });
 
 // simple query
 conn.query(
-  SELECT * FROM `contact`,
+  'SELECT * FROM contact.contacts;',
   function(err, results, fields) {
-    console.log(results); // 서버로부터 반환되는 결과행
-    console.log(fields); //  결과에 따른 메타데이터(지원이 된다면)
+    console.log(results); // results contains rows returned by server
   }
 );
 
@@ -41,15 +42,27 @@ app.get('/contact', (req, res)=>{
     res.render("contact"); //help.pug 찾아서 서버에서 렌더링해라!
 });
 
-app.post('/contactAdd', (req, res)=>{ 
+app.post("/contactAdd", (req, res)=>{ 
   //등록 하려는 문의 정보를 서버로 전송!
-  const type = req.body.type;
-  const name = req.bpdy.name;
-  const email = req.body.email;
-  const title= req.body.title;
-  const file= req.body.file;
-  const memo= req.body.memo;
-  console.log(type,title,name,email,title,file,memo);
+  let type = req.body.type == 1 ? "요청" : "문의"; //구분
+  let name = req.body.name;
+  let email = req.body.email;
+  let title= req.body.title;
+  let file= req.body.file;
+  let memo= req.body.memo;
+  // console.log(type,name,email,title,file,memo);
+  let sql = `INSERT INTO contact.contacts (type,name,email,title,file,memo,regadate)
+  VALUES ('${type}','${name}','${email}','${title}','${file}','${memo}',current_date())`
+
+  //query 실행명령
+  conn.query(
+    sql,
+    function(err, results, fields) {
+      if(err) throw error;
+      console.log('정상적으로 데이터가 입력되었습니다.');
+      res.send("<script>alert('등록되었습니다'); location.href='/';</script>");
+    }
+  );
 })
 
 app.listen(port, () => {
