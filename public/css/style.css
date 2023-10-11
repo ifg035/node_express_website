@@ -154,3 +154,17 @@
 .tip{
     color:var(--third-color);
 }
+
+/*========================== /contactList ========*/
+.contact_list,.cotact_list th, .contact_list td{
+    border: 1px solid var(--primary-color);
+    border-collapse: collapse;
+}
+.contact_list th,
+.contact_list td{
+    padding:.5rem 1rem;
+}
+
+.contact_list th{
+    background-color: var(--third-color);
+}
