@@ -14,25 +14,26 @@ html(lang="ko")
                 h3 작업요청 목록
             article 
                 h2(class="d-none") main - contactList
-                table(class="contact_list")
-                   tr 
-                        th 번호
-                        th 구분 
-                        th 이름
-                        th 이메일 
-                        th 제목
-                        th 파일 
-                        th 내용 
-                        th 등록일 
+                div(class="container mx-auto")
+                    table(class="contact_list")
+                        tr 
+                            th 번호
+                            th 구분 
+                            th 이름
+                            th 이메일 
+                            th 제목
+                            th 파일 
+                            th 내용 
+                            th 등록일 
                     each data in dataset
                         tr
-                            td= list.id
-                            td= list.type
-                            td= list.name
-                            td= list.email
-                            td= list.title
-                            td= list.file
-                            td= list.memo
-                            td= list.regadate
+                            td= data.id
+                            td= data.type
+                            td= data.name
+                            td= data.email
+                            td= data.title
+                            td= data.file
+                            td= data.memo
+                            td= data.regadate
 
         include includes/comm_footer.pug
