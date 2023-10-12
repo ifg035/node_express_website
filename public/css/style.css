@@ -5,6 +5,7 @@
   --secondery-color: white;
   --third-color:gray;
   --bg-blue:rgb(23, 165, 209);
+  --bg-whitegray:#efefef;
 }
 
 /*================= common style ==============*/
@@ -13,6 +14,9 @@
 }
 .d-flex{
     display: flex;
+}
+.d-grid{
+    display:grid;
 }
 .flex-column{
     flex-direction: column;
@@ -25,6 +29,9 @@
 }
 .justify-right{
     justify-content: right;
+}
+.align-center {
+    align-items: center
 }
 .h600{
     height:600px;
@@ -52,25 +59,34 @@
     gap: 3rem;
 }
 .mx-auto{
-    margin:auto 0;
+    margin:0 auto;
 }
 .my1{
-    margin:0 1rem;
+    margin:1rem 0;
 }
 .my2{
-    margin:0 2rem;
+    margin:2rem 0;
 }
 .my3{
+    margin:3rem 0;
+}
+.mx1{
+    margin:0 1rem;
+}
+.mx2{
+    margin:0 2rem;
+}
+.mx3{
     margin:0 3rem;
 }
 .py1{
-    padding:0 1rem;
+    padding:1rem 0; 
 }
 .py2{
-    padding:0 2rem;
+    padding:2rem 0; 
 }
 .py3{
-    padding:0 3rem;
+    padding:3rem 0;
 }
 /*=================header==============*/
 .container{
@@ -106,7 +122,57 @@
 .avatar{
     width:300px;
     height: 300px;
-    background: var(--third-color);
+    background:var(--bg-whitegray);
     border-radius:50%;
 
+}
+
+/*------------------  portfolio  -----------------------*/
+
+/*------------------  conatct -----------------------*/
+.contact-list{
+    display:block;
+    max-width:1440px;
+    text-align: center;
+    margin: 0 0 0 12rem;
+}
+
+
+
+.contact-list li{
+    border-top: 1px dotted var(--primary-color);
+    padding: 1rem 0;
+}
+
+.d-flex span{
+    display:block;
+    width:160px;
+}
+
+.d-flex textarea{
+    flex: 0 0 50%;
+}
+
+.tip{
+    color:var(--third-color);
+}
+
+/*========================== /contactList ========*/
+.contact_list,.contact_list th, .contact_list td{
+    border: 1px solid var(--primary-color);
+    border-collapse: collapse;
+}
+.contact_list th,
+.contact_list td{
+    padding:.5rem 1rem;
+}
+
+.contact_list th{
+    background-color: var(--third-color);
+}
+.contact_list .th-5{
+    width:5%
+}
+.contact_list .th-10{
+    width:10%;
 }
