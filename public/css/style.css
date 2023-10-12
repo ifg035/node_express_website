@@ -30,6 +30,9 @@
 .justify-right{
     justify-content: right;
 }
+.align-center {
+    align-items: center
+}
 .h600{
     height:600px;
     background: url("../images/cover_img.jpg") no-repeat center/cover ;
@@ -56,39 +59,38 @@
     gap: 3rem;
 }
 .mx-auto{
-    margin:auto 0;
+    margin:0 auto;
 }
 .my1{
-    margin:0 1rem;
-}
-.my2{
-    margin:0 2rem;
-}
-.my3{
-    margin:0 3rem;
-}
-.mx1{
     margin:1rem 0;
 }
-.mx2{
+.my2{
     margin:2rem 0;
 }
-.mx3{
+.my3{
     margin:3rem 0;
 }
+.mx1{
+    margin:0 1rem;
+}
+.mx2{
+    margin:0 2rem;
+}
+.mx3{
+    margin:0 3rem;
+}
 .py1{
-    padding:0 1rem;
+    padding:1rem 0; 
 }
 .py2{
-    padding:0 2rem;
+    padding:2rem 0; 
 }
 .py3{
-    padding:0 3rem;
+    padding:3rem 0;
 }
 /*=================header==============*/
 .container{
     max-width:1440px;
-    justify-content: space-between;
 }
 
 .slogan_title{
@@ -107,7 +109,6 @@
 .btn_request{
     width:9rem;
     height:2rem;
-    margin: 2rem 0 0 51.3rem;
     border-radius: 2rem;
     border:0;
     background: var(--primary-color);
@@ -157,7 +158,7 @@
 }
 
 /*========================== /contactList ========*/
-.contact_list,.cotact_list th, .contact_list td{
+.contact_list,.contact_list th, .contact_list td{
     border: 1px solid var(--primary-color);
     border-collapse: collapse;
 }

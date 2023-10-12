@@ -18,24 +18,24 @@ html(lang="ko")
                     table(class="contact_list")
                         tr 
                             th(class="th-5") 번호
-                            th(class="th-5") 구분 
+                            th(class="th-5") 구분
                             th(class="th-10") 이름
-                            th(class="th-10") 이메일 
+                            th(class="th-10") 이메일
                             th(class="th-5") 제목
-                            th(class="th-10") 파일 
-                            th(class="th-10") 내용 
+                            th(class="th-10") 파일
+                            th(class="th-10") 내용
                             th(class="th-5") 등록일
                             th 관리 
-                    each data in dataset
-                        tr
-                            td= data.id
-                            td= data.type
-                            td= data.name
-                            td= data.email
-                            td= data.title
-                            td= data.file
-                            td= data.memo
-                            td= data.regadata
-                            td 
-                                button(onclick=`location.href='/contactDel?id=${data.id}'`) 삭제
+                        each data in dataset
+                            tr
+                                td= data.id
+                                td= data.type
+                                td= data.name
+                                td= data.email
+                                td= data.title
+                                td= data.file
+                                td= data.memo
+                                td= data.regadata
+                                td
+                                    button(onclick=`location.href='/contactDel?id=${data.id}'`) 삭제
         include includes/comm_footer.pug

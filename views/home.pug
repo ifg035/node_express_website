@@ -9,7 +9,7 @@ html(lang="ko")
         include includes/comm_header.pug
         main 
            h3(class="d-none") home - main
-           article 
+            ~article 
                h3(class="text-center py-2 upper") about 
                div(class=" container mx-auto d-flex justify-between")
                     div(class="avatar")
@@ -20,14 +20,44 @@ html(lang="ko")
                             li 사는곳 : 광주광역시 남구
                             li 혈액형 : AB
                             li MBTI : INFJ
-           article 
+            article 
                 h3(class="text-center py-2 upper") portfolio
-                ul 
+                ul(class="container mx-auto d-flex justify-between gap2",id="pf_main") 
                     li 
                         img(src="images/pf_img1", alt="web")
                     li 
                         img(src="images/pf_img2", alt="graphic")
                     li 
                         img(src="images/pf_img3", alt="web")
-                button 더보기&plus;
+                div(class="text-center py-1") 
+                    button 더보기&plus;
+            article
+                h3(class="text-center py-2 upper") friendship
+                div(class="container_wide")
+                    div(class="container mx-auto d-flex justify-between gap-3")
+                        div(class="my_fan hidden flex-1")
+                            img(src="images/fav_avatar.png", alt="fav avatar")
+                        div(class="fan_words flex-3")
+                            p 10년지기 친구 | 홍길동
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit natus ipsam quisquam nostrum. Corporis quam est saepe totam in autem necessitatibus minima, impedit incidunt hic explicabo minus dolor porro aperiam?
+            article               
+                h3(class="text-center py-2 upper") skill &amp; tools
+                div(class="container mx-auto d-flex justify-between")
+                    div(class="skill")
+                        h4 skill
+                        ul 
+                            li 언어능력
+                            li 문제해결능력
+                            li 수리능력
+                    div(class="tools")
+                        h4 tools 
+                        ul 
+                            li photoshop
+                            li photoshop
+                            li photoshop
+                            li photoshop
+                            li photoshop
+                            li photoshop
+                            li photoshop
+                            li photoshop
         include includes/comm_footer.pug
