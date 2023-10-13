@@ -6,6 +6,8 @@
   --third-color:gray;
   --bg-blue:rgb(23, 165, 209);
   --bg-whitegray:#efefef;
+  --line-color: #a3a3a3;
+  --point-color: #f62b2b;
 }
 
 /*================= common style ==============*/
@@ -88,21 +90,46 @@
 .py3{
     padding:3rem 0;
 }
-/*=================header==============*/
 .container{
     max-width:1440px;
 }
+.container_wide{
+    width:100;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+[data-type="web"],
+[data-type="graphic"] {
+  background: var(--third-color);
+  height: 260px;
+  width: 250px;
+  display: inline-block;
+}
+
+/*=================header==============*/
+
 
 .slogan_title{
     font-size: 6rem;
     margin: 5rem 0 0 0;
-    text-align: center;
 }
 
 .slogan_text{
-    text-align: center;
-    /* justify-content: center; */
-    font-size: 1.5rem;
+    border-top: 1px solid var(--secondery-color);
+    padding: .5rem 0 0 0 ;
+    margin: 1rem 0 2rem 0;
+    font-size: 1.25rem;
     text-shadow: 1px 1px 3px var(--primary-color);
 }
 
@@ -116,37 +143,67 @@
 }
 
 
-/*------------------main>about-----------------------*/
+/*------------------ main > about -----------------------*/
 
 
 .avatar{
     width:300px;
     height: 300px;
-    background:var(--bg-whitegray);
+    background:var(--third-colory);
     border-radius:50%;
 
 }
 
-/*------------------  portfolio  -----------------------*/
-
-/*------------------  conatct -----------------------*/
-.contact-list{
-    display:block;
-    max-width:1440px;
-    text-align: center;
-    margin: 0 0 0 12rem;
+.my_fan{
+    width:150px;
+    height:150px;
+    background:var(--third-color);
+    border-radius: 50%;
 }
 
+#pf_main > li{
+    background:var(--third-color);
+    height:350px;
+    flex:1;
+}
 
+/*------------------  /about  --------------------------*/
+.btn {
+    padding: 0.5rem 1rem;
+}
 
-.contact-list li{
-    border-top: 1px dotted var(--primary-color);
+.btn-active {
+    background: var(--primary-color);
+    color:var(--secondery-color);
+}
+
+.edu_cover {
+    width:250px;
+    height: 250px;
+    background:var(--third-color);
+}
+
+.list {
+    list-style: disc inside;
+}
+/*------------------ /portfolio  -----------------------*/
+
+.pf {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*------------------  /conatct -----------------------*/
+
+.form-lists li{
+    border-top: 1px solid var(--primary-color);
     padding: 1rem 0;
 }
 
-.d-flex span{
+.d-flex label{
     display:block;
-    width:160px;
+    flex:0 0 10rem;
+    font-weight: 700;
 }
 
 .d-flex textarea{
@@ -157,22 +214,42 @@
     color:var(--third-color);
 }
 
-/*========================== /contactList ========*/
-.contact_list,.contact_list th, .contact_list td{
-    border: 1px solid var(--primary-color);
-    border-collapse: collapse;
-}
+.red {
+    color: var(--point-color);
+  }
+  
+  [type="text"],
+  [type="tel"],
+  [type="email"],
+  textarea {
+    padding: 0.25rem 0.5rem;
+    outline: none;
+    border: 1px solid var(--line-color);
+  }
+
+/*========================== /contactList =============================*/
+
+.contact_list,
 .contact_list th,
 .contact_list td{
-    padding:.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.contact_list th,
+.contact_list td{
+    padding: 0.5rem 1rem;
 }
 
 .contact_list th{
-    background-color: var(--third-color);
+    background: var(--bg-whitegray);
 }
+
 .contact_list .th-5{
     width:5%
 }
+
 .contact_list .th-10{
     width:10%;
 }
